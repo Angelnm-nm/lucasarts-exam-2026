@@ -10,7 +10,7 @@ public class CharacterModel {
     public CharacterModel(String id, String nombre, String energia, String aspecto, String edad) {
         this.id = id;
         this.nombre = nombre;
-        Energia = energia;
+        this.Energia = energia;
         this.aspecto = aspecto;
         this.edad = edad;
     }
