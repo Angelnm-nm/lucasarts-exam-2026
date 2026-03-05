@@ -4,6 +4,7 @@ import lucasarts.Data.CharacterDataSource;
 import lucasarts.Data.CharacterMemLocalDataSource;
 import lucasarts.Domain.CharacterModel;
 import lucasarts.Domain.CharactersData;
+import lucasarts.Domain.DeleteCharacter;
 import lucasarts.Domain.GetCharacter;
 
 public class CharacterView {
@@ -17,6 +18,13 @@ public class CharacterView {
         GetCharacter getCharacter = new GetCharacter((CharactersData) new CharacterDataSource(new CharacterMemLocalDataSource()));
         getCharacter.execute(characterModel);
 
+    }
+    public static void deleteCharacters (CharacterModel characterModel){
+        CharacterModel characterModel1 = new CharacterModel("22","jeb","30","cuidado","4");
+        DeleteCharacter deleteCharacter =new DeleteCharacter((CharactersData) new CharacterDataSource(new CharacterMemLocalDataSource()));
+        deleteCharacter.delete(characterModel1);
+
+        }
     }
 
 
