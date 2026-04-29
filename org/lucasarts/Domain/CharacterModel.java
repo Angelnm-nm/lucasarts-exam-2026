@@ -2,19 +2,18 @@ package lucasarts.Domain;
 
 public class CharacterModel {
     private String id;
-    private String nombre;
-    private String Energia;
-    private String aspecto;
-    private String edad;
+    private String name;
+    private String role;
+    private int level;
+    private int health;
 
-    public CharacterModel(String id, String nombre, String energia, String aspecto, String edad) {
+    public CharacterModel(String id, String name, String role, int level, int health) {
         this.id = id;
-        this.nombre = nombre;
-        this.Energia = energia;
-        this.aspecto = aspecto;
-        this.edad = edad;
+        this.name = name;
+        this.role = role;
+        this.level = level;
+        this.health = health;
     }
-
 
     public String getId() {
         return id;
@@ -24,36 +23,46 @@ public class CharacterModel {
         this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getName() {
+        return name;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getEnergia() {
-        return Energia;
+    public String getRole() {
+        return role;
     }
 
-    public void setEnergia(String energia) {
-        Energia = energia;
+    public void setRole(String role) {
+        this.role = role;
     }
 
-    public String getAspecto() {
-        return aspecto;
+    public int getLevel() {
+        return level;
     }
 
-    public void setAspecto(String aspecto) {
-        this.aspecto = aspecto;
+    public void setLevel(int level) {
+        this.level = level;
     }
 
-    public String getEdad() {
-        return edad;
+    public int getHealth() {
+        return health;
     }
 
-    public void setEdad(String edad) {
-        this.edad = edad;
+    public void setHealth(int health) {
+        this.health = health;
     }
 
+    @Override
+    public String toString() {
+        return "CharacterModel{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", role='" + role + '\'' +
+                ", level=" + level +
+                ", health=" + health +
+                '}';
+    }
 }

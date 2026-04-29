@@ -1,11 +1,13 @@
 package lucasarts.Domain;
 
 public class DeleteCharacter {
-    CharactersData charactersData;
-    public DeleteCharacter(CharactersData charactersData){
-        this.charactersData = charactersData;
+    CharacterRepository characterRepository;
+
+    public DeleteCharacter(CharacterRepository characterRepository) {
+        this.characterRepository = characterRepository;
     }
-    public void delete(CharacterModel characterModel1){
-        charactersData.delete();
+
+    public void execute(String characterId) {
+        characterRepository.delete(characterId);
     }
 }
