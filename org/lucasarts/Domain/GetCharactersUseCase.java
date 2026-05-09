@@ -12,7 +12,7 @@ public class GetCharactersUseCase {
         this.characterRepository = characterRepository;
     }
 
-    public ArrayList<CharacterModel> execute(){
+    public ArrayList<CharacterModel> execute(String characterId) {
         return characterRepository.getCharacters();
     }
 }
