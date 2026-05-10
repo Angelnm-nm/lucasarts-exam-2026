@@ -1,8 +1,8 @@
 package lucasarts.Domain;
 
-public class GetAlbumByIdUseCase {
+public class GetCharacterByIdUseCase {
     private CharacterRepository characterRepository;
-    public GetAlbumByIdUseCase(CharacterRepository characterRepository) {}
+    public GetCharacterByIdUseCase(CharacterRepository characterRepository) {}
 
     public CharacterModel execute(String characterId) {
         return characterRepository.getCharacter(characterId);
